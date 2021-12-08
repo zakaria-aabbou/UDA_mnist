@@ -198,8 +198,8 @@ validloader = torch.utils.data.DataLoader(
 testloader = torch.utils.data.DataLoader(
     testset, batch_size=4, shuffle=False, num_workers=2)
 
-classes = ('plane', 'car', 'bird', 'cat', 'deer',
-           'dog', 'frog', 'horse', 'ship', 'truck')
+classes = ('0', '1', '2', '3', '4',
+           '5', '6', '7', '8', '9')
 
 
 ######################### Visualize data ###############################
