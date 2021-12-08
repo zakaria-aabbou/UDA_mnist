@@ -2,6 +2,8 @@ import PIL
 import numpy as np
 from torchvision.datasets import MNIST
 
+from torchvision import transforms
+
 
 class MNIST_Sup(MNIST):
     """
@@ -49,7 +51,9 @@ class MNIST_Unsup(MNIST):
         """
         img = self.data[index]
 
-        img = PIL.Image.fromarray(img)
+        tensor_to_pil = transforms.ToPILImage()(img)
+        # img = PIL.Image.fromarray(img)
+        img = tensor_to_pil
 
         if self.transform_unsup is not None:
             img_unsup = self.transform_unsup(img)
