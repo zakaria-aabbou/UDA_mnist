@@ -127,10 +127,12 @@ with open('{}args.txt'.format(args.out_dir), 'w') as f:
     json.dump(args.__dict__, f, indent=2)
 
 if args.mod == 'semisup':
-    assert args.sup_num == 4000, "Remove assertion if you wish to have semi sup training with sup set != 4K"
+    print("mode is semisup !!\n")
+    #assert args.sup_num == 4000, "Remove assertion if you wish to have semi sup training with sup set != 4K"
 
 if args.mod == 'sup':
-    assert args.sup_num == 49000, "Remove assertion if you wish to have sup training with sup set != 49K"
+    print("mode is sup !!\n")
+    # assert args.sup_num == 49000, "Remove assertion if you wish to have sup training with sup set != 49K"
 
 writer = SummaryWriter(args.out_dir)
 
