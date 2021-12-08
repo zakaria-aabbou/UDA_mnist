@@ -151,8 +151,12 @@ transforms_aug = {"crop": transforms.RandomCrop(32, padding=4, padding_mode="ref
                   "cutout": transforms.RandomErasing(value='random'),
                   "randaug": RandAugment(2, 15),
                   "tensor": transforms.ToTensor(),
-                  "normalize": transforms.Normalize((0.49138702, 0.48217663, 0.44645257), (
-                      0.24706201, 0.24354138, 0.2616881))}
+                  "normalize": transforms.Normalize(
+                      #(0.49138702, 0.48217663, 0.44645257),
+                      #(0.24706201, 0.24354138, 0.2616881)
+                      [0.5],[0.5]
+                      )
+                }
 
 transform_train_sup = transforms.Compose(
     [transforms_aug[val] for val in args.sup_aug])
