@@ -146,7 +146,7 @@ Input data is initialized here, along with the train (sup & unsup), valid and te
 args.sup_aug += ["tensor", "normalize"]
 args.unsup_aug += ["tensor", "normalize"]
 
-transforms_aug = {"crop": transforms.RandomCrop(32, padding=4, padding_mode="reflect"),
+transforms_aug = {"crop": transforms.RandomCrop(28, padding=4, padding_mode="reflect"),
                   "hflip": transforms.RandomHorizontalFlip(),
                   "cutout": transforms.RandomErasing(value='random'),
                   "randaug": RandAugment(2, 15),

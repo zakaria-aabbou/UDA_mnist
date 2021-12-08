@@ -159,7 +159,8 @@ def CutoutAbs(img, v):
     y1 = min(h, y0 + v)
 
     xy = (x0, y0, x1, y1)
-    color = (125, 123, 114)
+    #color = (125, 123, 114)
+    color = (0)
     img = img.copy()
     PIL.ImageDraw.Draw(img).rectangle(xy, color)
     return img
