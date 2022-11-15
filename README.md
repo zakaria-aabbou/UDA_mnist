@@ -1,9 +1,7 @@
 
 # Prédiction des données MNIST avec uniquement 100 labels
 
-Dans ce projet, nous proposons des méthodes simples de formation réseau de neurones de
-manière semi-supervisée, notre jeu de donnée sera les données MNIST qui est une base de
-données de chiffres écrits à la main. C’est un jeu de données très utilisé en apprentissage
+Dans ce projet, nous proposons des méthodes simples pour entraîner un réseau de neurones semi-supervisée, notre jeu de donnée sera les données MNIST qui est une base de données de chiffres écrits à la main (MNIST). C’est un jeu de données très utilisé en apprentissage
 automatique, ce dernier contiens une base d’apprentissage de 60000(x,y) et une base de
 test d’environ 10000(x,y) exemples.
 L’objectif c’est de faire un réseau de neurones qui va prédire le label qui est sur l’image
